@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Karla', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(204, 43%, 93%);
+
+}
+
+main{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas: "one one one one" "two two three three";
+  width: 600px;
+  height: 400px;
+}
+section{
+  padding: 40px 30px;
+}
+section h3,
+section h4{
+  margin-bottom: 20px;
+}
+.one{
+  grid-area: one;
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+}
+.one h3{
+  color: hsl(179, 62%, 43%);
+}
+.one h4{
+  color: hsl(71, 73%, 54%);
+  margin-bottom: 10px;
+}
+.one p{
+  color: hsl(218, 22%, 67%);
+  line-height: 1.6;
+}
+.two{
+  grid-area: two;
+  background-color: hsl(179, 62%, 43%);
+  border-radius: 0 0 0 10px;
+  color: white;
+}
+.two h3{
+  margin-bottom: 15px;
+}
+.two h4{
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+.two h4 span{
+  font-size: 15px;
+  position: relative;
+  top: -6px;
+  opacity: 0.5;
+  margin-left: 3px;
+}
+.two button{
+  width: 100%;
+  padding: 15px;
+  border:none;
+  background-color: hsl(71, 73%, 54%);
+  color: white;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 25px;
+}
+.three{
+  grid-area: three;
+  background-color: hsl(179, 62%, 43%);
+  border-radius: 0 0 10px 0;
+  color: white;
+  opacity: 0.8;
+}
+.three p{
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+}
+@media (max-width:767px) {
+  main{
+    grid-template-areas: "one one one one" "two two two two" "three three three three";
+    padding: 40px 25px;
+    height: fit-content;
+    margin-top: 290px;
+  }
+  .two{
+    border-radius: 0;
+  }
+  .three{
+    border-radius: 0 0 10px 10px;
+  }
+}
